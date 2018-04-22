@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstronomicalCatalogLibrary", "AstronomicalCatalogLibrary\AstronomicalCatalogLibrary.csproj", "{F32C8FFE-74B2-4F90-95E1-742E4ED9C6FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstronomicalCatalog.UI", "AstronomicalCatalog.UI\AstronomicalCatalog.UI.csproj", "{45B03B95-DA24-4BD8-A823-1D04E38536D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationTest", "SerializationTest\SerializationTest.csproj", "{5AB62BF5-92AA-4A15-9A1F-0BA26A9077C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{F32C8FFE-74B2-4F90-95E1-742E4ED9C6FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F32C8FFE-74B2-4F90-95E1-742E4ED9C6FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F32C8FFE-74B2-4F90-95E1-742E4ED9C6FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45B03B95-DA24-4BD8-A823-1D04E38536D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B03B95-DA24-4BD8-A823-1D04E38536D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B03B95-DA24-4BD8-A823-1D04E38536D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B03B95-DA24-4BD8-A823-1D04E38536D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AB62BF5-92AA-4A15-9A1F-0BA26A9077C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AB62BF5-92AA-4A15-9A1F-0BA26A9077C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AB62BF5-92AA-4A15-9A1F-0BA26A9077C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AB62BF5-92AA-4A15-9A1F-0BA26A9077C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
