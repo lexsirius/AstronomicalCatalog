@@ -1,0 +1,18 @@
+﻿@model AstronomicalCatalogLibrary.Star
+
+@{
+    ViewBag.Title = "Print";
+}
+
+<h2>Данные о звезде: @Model.KIC_ID</h2>
+<div>Эффективная температура звезды: @Model.Teff</div>
+<div>Логарифм свободного падения на поверхности звезды: @Model.Logg</div>
+<div>Металличность: @Model.FeH</div>
+<div>Масса: @Model.Mass</div>
+<div>Радиус: @Model.Radius</div>
+<div>Планеты: </div>
+
+@foreach (var planet in Model.PlanetList)
+{
+    <div>@planet</div>
+}
