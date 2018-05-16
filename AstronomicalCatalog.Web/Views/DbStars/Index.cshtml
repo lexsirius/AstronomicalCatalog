@@ -1,0 +1,87 @@
+﻿@model IEnumerable<AstronomicalCatalog.Web.Models.DbStar>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KIC_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Logg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FeH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Radius)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DbPlanets)
+        </th>
+        <th>
+            Actions
+        </th>
+        <th></th>
+    </tr>
+
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KIC_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Teff)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FeH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Radius)
+            </td>
+            <td>
+                @foreach (var planet in item.DbPlanets)
+                {
+                    <p>@Html.DisplayFor(modelItem => planet.Name)</p>
+                }
+            </td>
+
+            <td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -3,6 +3,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using AstronomicalCatalog.Web.Models;
+using AstronomicalCatalog.Web.Migrations;
 
 namespace AstronomicalCatalog.Web.Models
 {
@@ -23,11 +25,16 @@ namespace AstronomicalCatalog.Web.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
         }
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<AstronomicalCatalog.Web.Models.DbStar> DbStars { get; set; }
+        public System.Data.Entity.DbSet<AstronomicalCatalog.Web.Models.DbPlanet> DbPlanets { get; set; }
+
     }
 }
