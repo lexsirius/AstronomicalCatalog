@@ -22,6 +22,8 @@ namespace AstronomicalCatalog.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        LicenseVerify StartVerify = new LicenseVerify();
+        
         public MainWindow()
         {
             InitializeComponent();

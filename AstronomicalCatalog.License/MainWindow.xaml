@@ -1,0 +1,24 @@
+﻿<Window x:Name="License_Generator" x:Class="AstronomicalCatalog.License.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AstronomicalCatalog.License"
+        mc:Ignorable="d"
+        Title="License Generator" Height="338" Width="450">
+    <Grid x:Name="Licenses_Gerenator" Margin="-1,0,1,0">
+        <Label x:Name="UserName_Label" Content="Введите имя пользователя:" HorizontalAlignment="Left" Height="34" Margin="25,35,0,0" VerticalAlignment="Top" Width="170"/>
+        <TextBox x:Name="UserNameBox" HorizontalAlignment="Left" Height="25" Margin="210,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190"/>
+        <Label x:Name="StartDate_Label" Content="Дата начала лицензии:" HorizontalAlignment="Left" Height="34" Margin="25,100,0,0" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="EndDate_Label" Content="Дата окончания лицензии:" HorizontalAlignment="Left" Height="34" Margin="25,165,0,0" VerticalAlignment="Top" Width="170"/>
+        <DatePicker x:Name="StartDatePicker" HorizontalAlignment="Left" Height="25" Margin="210,101,0,0" VerticalAlignment="Top" Width="190"/>
+        <DatePicker x:Name="EndDatePicker" HorizontalAlignment="Left" Height="25" Margin="210,166,0,0" VerticalAlignment="Top" Width="190"/>
+        <Button x:Name="Save_Button" Content="Сгенерировать " HorizontalAlignment="Left" Height="30" Margin="142,229,0,0" VerticalAlignment="Top" Width="160" Click="Save_Button_Click"/>
+        <Label x:Name="SaveMessage_Label" Content="Лицензия сгенерирована!" HorizontalAlignment="Left" Height="33" Margin="142,264,0,0" VerticalAlignment="Top" Width="160" Foreground="Red" Visibility="Hidden"/>
+        <Label x:Name="Error_Label" Content="Выберите путь файла еще раз!" HorizontalAlignment="Left" Height="33" Margin="130,264,0,0" VerticalAlignment="Top" Width="182" Foreground="Red" Visibility="Hidden"/>
+        <Label x:Name="ErrorName_Label" Content="Имя пользователя не введено" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Top" Width="190" Height="30" Foreground="Red" Visibility="Hidden"/>
+        <Label x:Name="ErrorStartDate_Label" Content="Дата введена некорректно" HorizontalAlignment="Left" Margin="210,71,0,0" VerticalAlignment="Top" Width="190" Height="30" Foreground="Red" Visibility="Hidden"/>
+        <Label x:Name="ErrorEndDate_Label" Content="Дата введена некорректно" HorizontalAlignment="Left" Margin="210,136,0,0" VerticalAlignment="Top" Width="190" Height="30" Foreground="Red" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
