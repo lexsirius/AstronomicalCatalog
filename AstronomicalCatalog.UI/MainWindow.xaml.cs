@@ -80,17 +80,11 @@ namespace AstronomicalCatalog.UI
             }
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void AddElement_Click(object sender, RoutedEventArgs e)
         {
 
             var planetWindow = new PlanetWindow(new Planet());
-            var res = planetWindow.ShowDialog();
-            if (res == planetWindow.DialogResult)
+            if (planetWindow.ShowDialog() == true)
             {
                 PlanetList.Items.Add(planetWindow.planet);
             }
@@ -98,12 +92,17 @@ namespace AstronomicalCatalog.UI
 
         private void PlanetList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (PlanetList.Items.Count != 0)
+                DeleteElement.IsEnabled = true;
+        }
+
+        private void PlanetList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
             var planet = PlanetList.SelectedItem as Planet;
             if (planet == null)
                 return;
-            var planetWindow = new PlanetWindow(planet.Clone());
-            var res = planetWindow.ShowDialog();
-            if (res == true)
+            var planetWindow = new PlanetWindow(planet);
+            if (planetWindow.ShowDialog() == true)
             {
                 var si = PlanetList.SelectedIndex;
                 PlanetList.Items.RemoveAt(si);
@@ -117,6 +116,9 @@ namespace AstronomicalCatalog.UI
         {
             var si = PlanetList.SelectedIndex;
             PlanetList.Items.RemoveAt(si);
+
+            if (PlanetList.Items.Count == 0)
+                DeleteElement.IsEnabled = false;
         }
     }
 }

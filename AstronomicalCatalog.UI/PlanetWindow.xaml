@@ -11,7 +11,7 @@
         <Label x:Name="Radius" Content="Radius" HorizontalAlignment="Left" Height="30" Margin="31,74,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="PlanetName" HorizontalAlignment="Left" Height="30" Margin="131,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
         <TextBox x:Name="PlanetRadius" HorizontalAlignment="Left" Height="30" Margin="131,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
-        <Button x:Name="OK" Content="OK" HorizontalAlignment="Left" Height="23" Margin="31,126,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
+        <Button x:Name="OK" Content="OK" HorizontalAlignment="Left" Height="23" Margin="31,126,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" IsDefault="True"/>
         <Button x:Name="Cancel" Content="Сancel" HorizontalAlignment="Left" Height="23" Margin="155,126,0,0" VerticalAlignment="Top" Width="100" Click="Cancel_Click"/>
 
     </Grid>

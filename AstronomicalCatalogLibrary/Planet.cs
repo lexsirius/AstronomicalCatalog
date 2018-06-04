@@ -17,10 +17,5 @@ namespace AstronomicalCatalogLibrary
         {
             return string.Format("{0} {1}", Name, Radius);
         }
-
-        public Planet Clone()
-        {
-            return new Planet { Name = Name, Radius = Radius };
-        }
     }
 }

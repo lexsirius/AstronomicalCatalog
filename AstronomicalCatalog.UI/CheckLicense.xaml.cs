@@ -49,6 +49,7 @@ namespace AstronomicalCatalog.UI
                 LicenseVerify StartVerify = new LicenseVerify();
                 StartVerify.Verify(FileName);
                 new MainWindow().Show();
+                Close();
             }
             catch (ApplicationException ex)
             {

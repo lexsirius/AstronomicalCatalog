@@ -23,27 +23,27 @@ namespace AstronomicalCatalog.UI
         public Planet planet { get; set; }
         public PlanetWindow(Planet planet)
         {
-            this.planet = planet;
             InitializeComponent();
-        }
-
-        private void PlanetWindow_Load(object sender, EventArgs e)
-        {
-            PlanetName.Text = planet.Name;
-            PlanetRadius.Text = planet.Radius.ToString();
+            this.planet = planet;
+            if(planet.Name != null || planet.Radius != 0)
+            {
+                PlanetName.Text = planet.Name;
+                PlanetRadius.Text = planet.Radius.ToString();
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             planet.Name = PlanetName.Text;
             planet.Radius = double.Parse(PlanetRadius.Text);
-            this.DialogResult = true;
-            this.Close();
+            DialogResult = true;
+            Close();
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            DialogResult = false;
+            Close();
         }
     }
 }
