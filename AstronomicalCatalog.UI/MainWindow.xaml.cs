@@ -25,6 +25,7 @@ namespace AstronomicalCatalog.UI
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
         Star GetModelFromUI()

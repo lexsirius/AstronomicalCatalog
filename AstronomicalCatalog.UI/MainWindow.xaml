@@ -9,16 +9,16 @@
     <Window.BindingGroup>
         <BindingGroup/>
     </Window.BindingGroup>
-    <Grid>
+    <Grid Background="AliceBlue">
         <Grid.BindingGroup>
             <BindingGroup/>
         </Grid.BindingGroup>
-        <Label Content="KIC ID" HorizontalAlignment="Left" Margin="40,24,0,0" VerticalAlignment="Top" Height="25" Width="100"/>
-        <Label Content="Temperature" HorizontalAlignment="Left" Margin="40,64,0,0" VerticalAlignment="Top" Height="25" Width="100"/>
-        <Label Content="log g" HorizontalAlignment="Left" Margin="40,104,0,0" VerticalAlignment="Top" Height="35" Width="100"/>
-        <Label Content="Fe/H" HorizontalAlignment="Left" Margin="40,144,0,0" VerticalAlignment="Top" Height="25" Width="100"/>
-        <Label Content="Mass" HorizontalAlignment="Left" Margin="40,184,0,0" VerticalAlignment="Top" Height="25" Width="100"/>
-        <Label Content="Radius" HorizontalAlignment="Left" Margin="40,224,0,0" VerticalAlignment="Top" Height="25" Width="100"/>
+        <Label Content="KIC ID" HorizontalAlignment="Left" Margin="40,24,0,0" VerticalAlignment="Top" Height="25" Width="100" ToolTip="Номер звезды в каталоге KIC - Kepler Input Catalog. Целое число."/>
+        <Label Content="Temperature" HorizontalAlignment="Left" Margin="36,64,0,0" VerticalAlignment="Top" Height="25" Width="100" ToolTip="Эффективная температура звезды. [Teff] = K. Целое число."/>
+        <Label Content="log g" HorizontalAlignment="Left" Margin="40,104,0,0" VerticalAlignment="Top" Height="35" Width="100" ToolTip="Десятичный логарифм свободного падения на поверхности звезды [g] = см/с^2. Вещественное число."/>
+        <Label Content="Fe/H" HorizontalAlignment="Left" Margin="40,144,0,0" VerticalAlignment="Top" Height="25" Width="100" ToolTip="Металличность звезды. Вещественное число."/>
+        <Label Content="Mass" HorizontalAlignment="Left" Margin="40,184,0,0" VerticalAlignment="Top" Height="25" Width="100" ToolTip="Масса звезды, выраженная в массах Солнца. Вещественное число."/>
+        <Label Content="Radius" HorizontalAlignment="Left" Margin="40,224,0,0" VerticalAlignment="Top" Height="25" Width="100" ToolTip="Радиус звезды, выраженный в радиусах Солнца. Вещественное число."/>
         <Label Content="List of planets" HorizontalAlignment="Left" Margin="40,264,0,0" VerticalAlignment="Top" Height="25" Width="100"/>
         <TextBox x:Name="KIC_IDValue" HorizontalAlignment="Left" Height="23" Margin="190,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <TextBox x:Name="TeffValue" HorizontalAlignment="Left" Height="23" Margin="190,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
@@ -26,8 +26,8 @@
         <TextBox x:Name="FeHValue" HorizontalAlignment="Left" Height="23" Margin="190,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <TextBox x:Name="MassValue" HorizontalAlignment="Left" Height="23" Margin="190,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
         <TextBox x:Name="RadiusValue" HorizontalAlignment="Left" Height="23" Margin="190,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200"/>
-        <Button x:Name="SaveToFile" Content="Save" HorizontalAlignment="Left" Margin="496,339,0,0" VerticalAlignment="Top" Width="90" Height="26" Click="SaveToFile_Click" RenderTransformOrigin="-0.844,1.491"/>
-        <Button x:Name="OpenFile" Content="Open" HorizontalAlignment="Left" Margin="622,339,0,0" VerticalAlignment="Top" Width="90" Height="26" Click="OpenFile_Click" RenderTransformOrigin="-4.933,1.077"/>
+        <Button x:Name="SaveToFile" Content="Сохранить" HorizontalAlignment="Left" Margin="496,339,0,0" VerticalAlignment="Top" Width="90" Height="26" Click="SaveToFile_Click" RenderTransformOrigin="-0.844,1.491"/>
+        <Button x:Name="OpenFile" Content="Открыть" HorizontalAlignment="Left" Margin="622,339,0,0" VerticalAlignment="Top" Width="90" Height="26" Click="OpenFile_Click" RenderTransformOrigin="-4.933,1.077"/>
         <ListBox x:Name="PlanetList" HorizontalAlignment="Left" Height="70" Margin="190,264,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="PlanetList_SelectionChanged"  ListBoxItem.MouseDoubleClick="PlanetList_MouseDoubleClick"/>
         <Button x:Name="AddElement" Content="+" HorizontalAlignment="Left" Margin="190,339,0,0" VerticalAlignment="Top" Width="75" Click="AddElement_Click"/>
         <Button x:Name="DeleteElement" Content="-" HorizontalAlignment="Left" Margin="315,339,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="DeleteElement_Click"/>

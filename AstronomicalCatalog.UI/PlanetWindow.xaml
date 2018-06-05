@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:AstronomicalCatalog.UI"
         mc:Ignorable="d"
         Title="PlanetWindow" Height="200" Width="300">
-    <Grid>
-        <Label x:Name="Name" Content="Name" HorizontalAlignment="Left" Height="30" Margin="31,29,0,0" VerticalAlignment="Top" Width="100"/>
-        <Label x:Name="Radius" Content="Radius" HorizontalAlignment="Left" Height="30" Margin="31,74,0,0" VerticalAlignment="Top" Width="100"/>
+    <Grid Background="AliceBlue">
+        <Label x:Name="Name" Content="Name" HorizontalAlignment="Left" Height="30" Margin="31,29,0,0" VerticalAlignment="Top" Width="100" ToolTip="Имя или номер планеты, вращающейся вокруг данной звезды."/>
+        <Label x:Name="Radius" Content="Radius" HorizontalAlignment="Left" Height="30" Margin="31,74,0,0" VerticalAlignment="Top" Width="100" ToolTip="Радиус планеты в м. Вещественное число."/>
         <TextBox x:Name="PlanetName" HorizontalAlignment="Left" Height="30" Margin="131,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
         <TextBox x:Name="PlanetRadius" HorizontalAlignment="Left" Height="30" Margin="131,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
         <Button x:Name="OK" Content="OK" HorizontalAlignment="Left" Height="23" Margin="31,126,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" IsDefault="True"/>
