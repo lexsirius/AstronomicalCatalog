@@ -25,7 +25,7 @@ namespace AstronomicalCatalog.UI
         {
             InitializeComponent();
             this.planet = planet;
-            if(planet.Name != null || planet.Radius != 0)
+            if (planet.Name != null || planet.Radius != 0)
             {
                 PlanetName.Text = planet.Name;
                 PlanetRadius.Text = planet.Radius.ToString();
@@ -34,10 +34,43 @@ namespace AstronomicalCatalog.UI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            planet.Name = PlanetName.Text;
-            planet.Radius = double.Parse(PlanetRadius.Text);
-            DialogResult = true;
-            Close();
+            try
+            {
+                planet.Name = IsCorrect(PlanetName.Text);
+                planet.Radius = IsCorrectDouble(PlanetRadius.Text, "Radius");
+                DialogResult = true;
+                Close();
+            }
+            catch (ApplicationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private string IsCorrect(string input)
+        {
+            if (string.IsNullOrEmpty(input))
+            {
+                throw new ApplicationException("Поле Name не должно быть пустым.");
+            }
+            return input;
+        }
+        private double IsCorrectDouble(string input, string cellName)
+        {
+            double result = 0;
+            if (String.IsNullOrEmpty(input))
+            {
+                throw new ApplicationException("Поле " + cellName + " не должно быть пустым.\nВведите значение.");
+            }
+            if (!double.TryParse(input, out result))
+            {
+                throw new ApplicationException("Некорректный ввод поля " + cellName + ".\n\"" + input + "\" содержит недопустимые символы.");
+            }
+            if (result <= 0)
+            {
+                throw new ApplicationException("Некорректный ввод поля " + cellName + ".\n\"" + input + "\" <= 0.");
+            }
+            return result;
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)

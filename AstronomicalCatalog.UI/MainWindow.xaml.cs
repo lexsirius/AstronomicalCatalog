@@ -22,8 +22,6 @@ namespace AstronomicalCatalog.UI
     /// </summary>
     public partial class MainWindow : Window
     {
-        LicenseVerify StartVerify = new LicenseVerify();
-        
         public MainWindow()
         {
             InitializeComponent();
@@ -31,18 +29,77 @@ namespace AstronomicalCatalog.UI
 
         Star GetModelFromUI()
         {
-            return new Star()
+            Star star = new Star();
+            try
             {
-                KIC_ID = long.Parse(KIC_IDValue.Text), //try-catch single method
-                Teff = int.Parse(TeffValue.Text),
-                Logg = double.Parse(LoggValue.Text),
-                FeH = double.Parse(FeHValue.Text),
-                Mass = double.Parse(MassValue.Text),
-                Radius = double.Parse(RadiusValue.Text),
-                PlanetList = PlanetList.Items.Cast<Planet>().ToList(),
-            };
+                star.KIC_ID = IsCorrectLong(KIC_IDValue.Text);
+                star.Teff = IsCorrectInt(TeffValue.Text);
+                star.Logg = IsCorrectDouble(LoggValue.Text, "log g");
+                star.FeH = IsCorrectDouble(FeHValue.Text, "Fe/H");
+                star.Mass = IsCorrectDouble(MassValue.Text, "Mass");
+                star.Radius = IsCorrectDouble(RadiusValue.Text, "Radius");
+            }
+            catch (ApplicationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+            return star;
         }
 
+        private long IsCorrectLong(string input)
+        {
+            long result = 0;
+            if (String.IsNullOrEmpty(input))
+            {
+                throw new ApplicationException("Поле KIC_ID не должно быть пустым.\nВведите значение.");
+            }
+            if (!long.TryParse(input, out result))
+            {
+                throw new ApplicationException("Некорректный ввод поля KIC_ID.\n\"" + input + "\" содержит недопустимые символы.");
+            }
+            if (result <= 0)
+            {
+                throw new ApplicationException("Некорректный ввод поля KIC_ID.\n\"" + input + "\" <= 0.");
+            }
+            return result;
+        }
+
+        private int IsCorrectInt(string input)
+        {
+            int result = 0;
+            if (String.IsNullOrEmpty(input))
+            {
+                throw new ApplicationException("Поле Teff не должно быть пустым.\nВведите значение.");
+            }
+            if (!int.TryParse(input, out result))
+            {
+                throw new ApplicationException("Некорректный ввод поля Teff.\n\"" + input + "\" содержит недопустимые символы.");
+            }
+            if (result <= 0)
+            {
+                throw new ApplicationException("Некорректный ввод поля Teff.\n\"" + input + "\" <= 0.");
+            }
+            return result;
+        }
+
+        private double IsCorrectDouble(string input, string cellName)
+        {
+            double result = 0;
+            if (String.IsNullOrEmpty(input))
+            {
+                throw new ApplicationException("Поле " + cellName + " не должно быть пустым.\nВведите значение.");
+            }
+            if (!double.TryParse(input, out result))
+            {
+                throw new ApplicationException("Некорректный ввод поля " + cellName + ".\n\"" + input + "\" содержит недопустимые символы.");
+            }
+            if (result <= 0)
+            {
+                throw new ApplicationException("Некорректный ввод поля " + cellName + ".\n\"" + input + "\" <= 0.");
+            }
+            return result;
+        }
         private void SetModelToUI(Star star)
         {
             KIC_IDValue.Text = star.KIC_ID.ToString();

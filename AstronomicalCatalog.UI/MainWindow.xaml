@@ -31,6 +31,5 @@
         <ListBox x:Name="PlanetList" HorizontalAlignment="Left" Height="70" Margin="190,264,0,0" VerticalAlignment="Top" Width="200" SelectionChanged="PlanetList_SelectionChanged"  ListBoxItem.MouseDoubleClick="PlanetList_MouseDoubleClick"/>
         <Button x:Name="AddElement" Content="+" HorizontalAlignment="Left" Margin="190,339,0,0" VerticalAlignment="Top" Width="75" Click="AddElement_Click"/>
         <Button x:Name="DeleteElement" Content="-" HorizontalAlignment="Left" Margin="315,339,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="DeleteElement_Click"/>
-
     </Grid>
 </Window>
