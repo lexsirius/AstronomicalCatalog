@@ -38,7 +38,7 @@ namespace AstronomicalCatalog.Web.Controllers
         // GET: DbStars/Create
         public ActionResult Create()
         {
-            return View();
+            return View(new DbStar());
         }
 
         // POST: DbStars/Create
@@ -46,7 +46,7 @@ namespace AstronomicalCatalog.Web.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id")] DbStar dbStar)
+        public ActionResult Create([Bind(Include = "Id, KIC_ID, Teff, Logg, FeH, Mass, Radius")] DbStar dbStar)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace AstronomicalCatalog.Web.Controllers
         // сведения см. в статье https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id")] DbStar dbStar)
+        public ActionResult Edit([Bind(Include = "Id, KIC_ID, Teff, Logg, FeH, Mass, Radius")] DbStar dbStar)
         {
             if (ModelState.IsValid)
             {
