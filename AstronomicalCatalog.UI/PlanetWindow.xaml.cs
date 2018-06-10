@@ -24,7 +24,6 @@ namespace AstronomicalCatalog.UI
         public PlanetWindow(Planet planet)
         {
             InitializeComponent();
-            this.Icon = "D:\\AstoCat\\AstronomicalCatalog\\AstronomicalCatalog.UI\\logo";
             this.planet = planet;
             if (planet.Name != null || planet.Radius != 0)
             {

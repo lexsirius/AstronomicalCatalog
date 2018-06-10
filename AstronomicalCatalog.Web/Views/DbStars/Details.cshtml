@@ -1,18 +1,26 @@
 ﻿@model AstronomicalCatalog.Web.Models.DbStar
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Данные о звезде";
 }
-
-<h2>Details</h2>
+<h2>Данные о звезде: @Model.KIC_ID</h2>
 
 <div>
-    <h4>DbStar</h4>
     <hr />
-    <dl class="dl-horizontal">
-    </dl>
+    <dl class="dl-horizontal"></dl>
+    <div>Эффективная температура звезды: @Model.Teff</div>
+    <div>Логарифм свободного падения на поверхности звезды: @Model.Logg</div>
+    <div>Металличность: @Model.FeH</div>
+    <div>Масса: @Model.Mass</div>
+    <div>Радиус: @Model.Radius</div>
+    <div>Планеты: </div>
+
+    @foreach (var planet in Model.DbPlanets)
+    {
+        <div>@planet</div>
+    }
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Редактировать", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Вернуться к базе", "Index")
 </p>

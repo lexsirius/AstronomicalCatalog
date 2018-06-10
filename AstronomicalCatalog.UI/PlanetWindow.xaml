@@ -5,14 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AstronomicalCatalog.UI"
         mc:Ignorable="d"
-        Title="PlanetWindow" Height="200" Width="300">
+        Title="Окно планеты" Height="200" Width="325">
     <Grid Background="AliceBlue">
-        <Label x:Name="Name" Content="Name" HorizontalAlignment="Left" Height="30" Margin="31,29,0,0" VerticalAlignment="Top" Width="100" ToolTip="Имя или номер планеты, вращающейся вокруг данной звезды."/>
-        <Label x:Name="Radius" Content="Radius" HorizontalAlignment="Left" Height="30" Margin="31,74,0,0" VerticalAlignment="Top" Width="100" ToolTip="Радиус планеты в м. Вещественное число."/>
-        <TextBox x:Name="PlanetName" HorizontalAlignment="Left" Height="30" Margin="131,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
-        <TextBox x:Name="PlanetRadius" HorizontalAlignment="Left" Height="30" Margin="131,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
+        <Label x:Name="Name" Content="Name" HorizontalAlignment="Left" Height="25" Margin="46,29,0,0" VerticalAlignment="Top" Width="80" ToolTip="Имя или номер планеты, вращающейся вокруг данной звезды."/>
+        <Label x:Name="Radius" Content="Radius" HorizontalAlignment="Left" Height="25
+               " Margin="46,74,0,0" VerticalAlignment="Top" Width="80" ToolTip="Радиус планеты в радиусах Земли. Вещественное число."/>
+        <TextBox x:Name="PlanetName" HorizontalAlignment="Left" Height="23" Margin="131,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="PlanetRadius" HorizontalAlignment="Left" Height="23" Margin="131,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <Button x:Name="OK" Content="OK" HorizontalAlignment="Left" Height="23" Margin="31,126,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click" IsDefault="True"/>
-        <Button x:Name="Cancel" Content="Сancel" HorizontalAlignment="Left" Height="23" Margin="155,126,0,0" VerticalAlignment="Top" Width="100" Click="Cancel_Click"/>
+        <Button x:Name="Cancel" Content="Отмена" HorizontalAlignment="Left" Height="23" Margin="158,126,0,0" VerticalAlignment="Top" Width="100" Click="Cancel_Click"/>
 
     </Grid>
 </Window>

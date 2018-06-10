@@ -1,13 +1,13 @@
 ﻿@model IEnumerable<AstronomicalCatalog.Web.Models.DbStar>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "База астроданных";
 }
 
-<h2>Index</h2>
+<h3 style="color:darkblue">База астроданных</h3>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Добавить новую звезду", "Create")
 </p>
 <table class="table">
     <tr>
@@ -37,7 +37,7 @@
             @Html.DisplayNameFor(model => model.DbPlanets)
         </th>
         <th>
-            Actions
+            Действия
         </th>
         <th></th>
     </tr>
@@ -74,12 +74,10 @@
                     <p>@Html.DisplayFor(modelItem => planet.Name)</p>
                 }
             </td>
-
             <td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Показать данные", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
             </td>
         </tr>
     }

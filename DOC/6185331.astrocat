@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Star xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KIC_ID>6185331</KIC_ID>
+  <Teff>5578</Teff>
+  <Logg>4.786</Logg>
+  <FeH>0.287</FeH>
+  <Mass>1.027</Mass>
+  <Radius>1.27</Radius>
+  <PlanetList>
+    <Planet>
+      <Name>6185331 b</Name>
+      <Radius>8.064</Radius>
+    </Planet>
+  </PlanetList>
+</Star>

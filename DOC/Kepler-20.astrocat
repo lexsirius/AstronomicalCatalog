@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Star xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KIC_ID>6850504</KIC_ID>
+  <Teff>5342</Teff>
+  <Logg>2.78</Logg>
+  <FeH>0.02</FeH>
+  <Mass>0.912</Mass>
+  <Radius>0.944</Radius>
+  <PlanetList>
+    <Planet>
+      <Name>Kepler-20 b</Name>
+      <Radius>1.91</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-20 c</Name>
+      <Radius>3.07</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-20 d</Name>
+      <Radius>2.75</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-20 e</Name>
+      <Radius>0.87</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-20 f</Name>
+      <Radius>1.03</Radius>
+    </Planet>
+  </PlanetList>
+</Star>

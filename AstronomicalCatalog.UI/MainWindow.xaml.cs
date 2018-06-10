@@ -25,7 +25,6 @@ namespace AstronomicalCatalog.UI
         public MainWindow()
         {
             InitializeComponent();
-            
         }
 
         Star GetModelFromUI()
@@ -39,6 +38,7 @@ namespace AstronomicalCatalog.UI
                 star.FeH = IsCorrectDouble(FeHValue.Text, "Fe/H");
                 star.Mass = IsCorrectDouble(MassValue.Text, "Mass");
                 star.Radius = IsCorrectDouble(RadiusValue.Text, "Radius");
+                star.PlanetList = PlanetList.Items.Cast<Planet>().ToList();
             }
             catch (ApplicationException ex)
             {
@@ -123,8 +123,43 @@ namespace AstronomicalCatalog.UI
             if (result == true)
             {
                 var star = GetModelFromUI();
-                Serializer.WriteToFile(sfd.FileName, star);
+                if (!IsEmptyInput(star))
+                {
+                    Serializer.WriteToFile(sfd.FileName, star);
+                    MessageBox.Show("Файл сохранен успешно.");
+                    ClearWindow();
+                }
+                else
+                {
+                    MessageBox.Show("Повторите ввод.");
+                }
             }
+            
+        }
+
+        private bool IsEmptyInput(Star star)
+        {
+            if (star.KIC_ID == 0 ||
+                star.Teff == 0 ||
+                star.Logg == 0 ||
+                star.FeH == 0 ||
+                star.Mass == 0 ||
+                star.Radius == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void ClearWindow()
+        {
+            KIC_IDValue.Text = "";
+            TeffValue.Text = "";
+            LoggValue.Text = "";
+            FeHValue.Text = "";
+            MassValue.Text = "";
+            RadiusValue.Text = "";
+            PlanetList.Items.Clear();
         }
 
         private void OpenFile_Click(object sender, RoutedEventArgs e)
@@ -134,6 +169,7 @@ namespace AstronomicalCatalog.UI
             if (result == true)
             {
                 var star = Serializer.LoadFromFile(ofd.FileName);
+                ClearWindow();
                 SetModelToUI(star);
             }
         }

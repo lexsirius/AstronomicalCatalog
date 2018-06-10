@@ -3,10 +3,10 @@
     ViewBag.Title = "Показать данные о звезде";
 }
 
-<h2>Index</h2>
+<h3 style="color:darkblue">Страница загрузки данных</h3>
 
 @using (Html.BeginForm("Print", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <input type="file" name="file" />
-    <input type="submit" name="Submit" id="Submit" value="Upload" />
+    <input type="submit" name="Submit" id="Submit" value="Загрузить" />
 }

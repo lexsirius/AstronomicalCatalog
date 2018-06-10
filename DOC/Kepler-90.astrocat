@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Star xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KIC_ID>11442793</KIC_ID>
+  <Teff>6103</Teff>
+  <Logg>4.528</Logg>
+  <FeH>0.108</FeH>
+  <Mass>1.2</Mass>
+  <Radius>0.942</Radius>
+  <PlanetList>
+    <Planet>
+      <Name>Kepler-90 b</Name>
+      <Radius>1.31</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-90 c</Name>
+      <Radius>1.19</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-90 i</Name>
+      <Radius>1.32</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-90 d</Name>
+      <Radius>2.87</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-90 e</Name>
+      <Radius>2.66</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-90 f</Name>
+      <Radius>2.88</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-90 g</Name>
+      <Radius>8.1</Radius>
+    </Planet>
+    <Planet>
+      <Name>Kepler-90 h</Name>
+      <Radius>11.3</Radius>
+    </Planet>
+  </PlanetList>
+</Star>

@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Проверка лицензии" Height="168" Width="300">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Height="55" Margin="10,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272"><Run Text="Добро пожаловать в программу "/><Run Text="AstroCat!"/><LineBreak/><Run Text="Чтобы начать ползоваться программой, необходимо проверить наличие лицензии."/></TextBlock>
-        <Button x:Name="Check_Button" Content="Выбрать файл лицензии" HorizontalAlignment="Left" Height="24" Margin="10,96,0,0" VerticalAlignment="Top" Width="272" Click="Check_Button_Click"/>
+        <TextBlock HorizontalAlignment="Left" Height="55" Margin="10,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272"><Run Text="Добро пожаловать в программу "/><Run Text="AstroCat!"/><LineBreak/><Run Text="Чтобы начать пол"/><Run Text="ь"/><Run Text="зоваться программой, необходимо проверить наличие лицензии."/></TextBlock>
+        <Button x:Name="Check_Button" Content="Выбрать файл лицензии" Height="24" Margin="10,94,10,0" VerticalAlignment="Top" Click="Check_Button_Click"/>
 
     </Grid>
 </Window>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<Star xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <KIC_ID>7603200</KIC_ID>
+  <Teff>9871</Teff>
+  <Logg>2.7</Logg>
+  <FeH>0.28</FeH>
+  <Mass>0.57</Mass>
+  <Radius>0.54</Radius>
+  <PlanetList>
+    <Planet>
+      <Name>7603200 d</Name>
+      <Radius>0.58</Radius>
+    </Planet>
+    <Planet>
+      <Name>7603200 b</Name>
+      <Radius>1.61</Radius>
+    </Planet>
+    <Planet>
+      <Name>7603200 c</Name>
+      <Radius>1.609</Radius>
+    </Planet>
+  </PlanetList>
+</Star>

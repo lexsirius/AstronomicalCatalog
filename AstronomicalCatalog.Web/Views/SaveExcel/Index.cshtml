@@ -1,13 +1,13 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Скачать";
 }
 
-<h2>Save in Excel format?</h2>
+<h3 style="color:darkblue">Хотите загрузить базу астроданных в формате Excel?</h3>
 
 <div>
     @using (Html.BeginForm("Download", "SaveExcel", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-        <input type="submit" value="Save" /> @ViewBag.DownloadStatus
+        <input type="submit" value="Скачать" /> @ViewBag.DownloadStatus
     }
 </div>
